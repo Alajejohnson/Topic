@@ -1,0 +1,92 @@
+.browse{
+    background-color: var(--white-color);
+}
+.browse__header h5{
+    text-align: center;
+    color: var(--dark-color);
+    /* font-size: 58px; */
+}
+.tab__links{
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--p-color);
+    
+}
+.tab__link button{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--p-color);
+    padding: 0 10px ;
+    background: var(--bs-white-rgb);
+    border: 0;
+}
+.tab__content{
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+/* .content2{
+    grid-template-columns: repeat(auto-fit(max-content(250px, 1fr)));
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+} */
+.tab__items{
+    background: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    position: relative;
+}
+.tab__items:hover{
+    transition: ease-in 0.8s;
+    transform: translateY(-15px);
+}
+.tab__items h5{
+    font-family: var(--montserrat);
+    font-size: 24px;
+}
+.tab__items p{
+    color: var(--p-color);
+    font-size: 20px;
+    margin-top: 10px;
+}
+.tab__items img{
+    width: 100%;
+    object-fit: contain;
+}
+.tab__items .badge{
+    color: var(--white-color);
+    background-color: var(--design);    
+    padding: 7px;
+    border-radius: 10px;
+    width: fit-content;
+    position: absolute;
+    left: 85%;
+    top: 5%;
+}
+.badge h5{
+    font-size:16px;
+    font-family: var(--open);
+}
+#marketing .badge{
+    background: var(--marketing);
+}
+#finance .badge{
+    background: var(--finance);
+}
+#music .badge{
+    background: var(--music);
+}
+#education .badge{
+    background: var(--education);
+}
+.tab__items.active{
+    display: block;
+    border-bottom: 1px solid var(--text-blue) ;
+}
+.tab__link button:hover{
+    color: var(--text-blue);
+    border-bottom: 1px solid var(--text-blue) ;
+}
+

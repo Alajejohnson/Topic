@@ -1,0 +1,188 @@
+.hero{
+    position: relative;
+}
+.hero__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 6rem 0; */
+    position: relative;
+}
+.hero__top h5{
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--white-color);
+    text-align: center;
+}
+.hero__top p{
+    color: var(--text-blue);
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.hero__top .hero__input__group button{
+    background-color: var(--btn-bg-color);
+    padding: 15px 30px;
+    border: 0;
+    border-radius: 30px;
+    color: var(--white-color);
+    font-size: 20px;
+}
+.hero__input__group button:hover{
+    background-color: var(--btn-bg-hover-color);
+}
+.hero__input__group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 9px 12px;
+    background-color: var(--white-color);
+    border-radius: 40px;
+}
+.hero__input__group input{
+    border: none;
+    font-size: 25px;
+}
+.hero__input__group input::placeholder{
+    color: var(--p-color);
+}
+.hero__input__group input:focus{
+    outline: none;
+}
+
+.hero__buttom{
+    background-color: var(--btn-bg-color);
+    display: flex;
+    gap: 2rem;
+    border-radius:  0 0 10% 10% ;
+    justify-content: center;
+    position: fixed;
+}
+
+
+.hero__buttom__right{
+    background-color: var(--white-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: start;
+    align-items: start;
+    flex: 1;
+    width: fit-content;
+    position: relative;
+}
+
+.hero__buttom__right h5{
+    font-family: var(--montserrat);
+    font-size: 24px;
+    font-weight: 600;
+}
+.hero__buttom__right p{
+    color: var(--p-color);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero__input__group svg{
+    font-weight: 600;
+    padding: 0 14px;
+}
+
+.hero__buttom__left{
+    position: relative;
+    border-radius: 20px;
+    width: fit-content;
+    overflow: hidden;
+    flex: 2;
+    }
+.hero__buttom__right:hover{
+    transition: ease-in-out  1s;
+    transform: translateY(-14px);
+}
+.hero__buttom__left:hover{
+    transition: ease-in 1s;
+    transform: translateY(-14px);
+}
+.hero__buttom__left__layer{
+    position: absolute;
+    background: var(--background);
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.85;
+}
+.hero__buttom__left__text{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero__buttom__left__text h5{
+    font-size: 24px;
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.hero__buttom__left__layer__icon h5{
+    font-family: var(--open);
+}
+.socials{
+    width: fit-content;
+    background-color: var(--btn-bg-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 14%;
+}
+
+.hero__buttom__left__text{
+   position: absolute;
+   left: 5%;
+   top: 5%;
+}
+.hero__buttom__left__layer__icon{
+    display: flex;
+    gap: 1rem;
+}
+
+.hero__buttom__left__layer__icon svg:hover{
+    color: var(--text-blue);
+    transition: ease-in 0.5s;
+}
+.bookmark{
+    position: relative;
+    left: 64%;
+}
+.hero__buttom__container{
+    position: relative;
+    gap: 2rem;
+    width: 80%;
+    right: 2%;
+    bottom: 80px;
+}
+.hero__buttom{
+    position: relative;
+}
+.badge{
+    color: var(--white-color);
+    background-color: var(--btn-bg-color);    
+    padding: 7px;
+    border-radius: 10px;
+    width: fit-content;
+    position: absolute;
+    left: 85%;
+    top: 7%;
+}
+.badge h5{
+    font-size:16px;
+    font-family: var(--open);
+}
+.hero__buttom__left .badge{
+    background-color: var(--btn-bg-hover-color); 
+    top: 3%;
+}
