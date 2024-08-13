@@ -12,7 +12,7 @@ const FAQItem = ({ question, answer }) => {
   };
 
   return (
-    <div className="faq-item w-[350px]  lg:w-[400px] ">
+    <div className="faq-item max-w-[400px] md:max-w-[500px] lg:w-[400px] ">
       <div className="faq-question  relative hover:text-textblue hover:bg-[var(--accordion-active-bg)] hover:p-[10px] hover:rounded-3xl hover:items-center " onClick={toggleOpen}  >
         <strong>{question} </strong> 
         <Icon icon="quill:inline-down" className='absolute top-0 left-[90%] lg:left-80'  />

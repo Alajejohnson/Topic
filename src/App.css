@@ -32,6 +32,13 @@
 .linear__bg{
   background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 120px auto;
+}
 .section__padding{
   padding: 3rem 9rem;
 }

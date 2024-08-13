@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './container/layout/Layout';
 
 import { Browse, Contact, Contact_form, Faq, Footer, Header, Hero, Home, How, Pages, Topic, Webdesign } from './container';
+import Nopage from './container/nopage/Nopage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
                       <Route path='topic' element={<Topic />} />
                       <Route path='contact_form' element={<Contact_form />} />
                   {/* </Route> */}
+                  <Route path='*' element={<Nopage />}  />
 
 
             </Route>

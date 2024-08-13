@@ -33,7 +33,7 @@ const Header = () => {
     }`}
   >
     
-    <div className="header relative py-8 px-16 lg:px-0 lg:py-6   justify-normal lg:justify-around  ">
+    <div className="header relative py-4 px-16 lg:px-0 lg:py-6   justify-normal lg:justify-around  ">
 
             <div className="header__logo">
             <Link to="/" >
