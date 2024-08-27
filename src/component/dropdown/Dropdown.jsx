@@ -18,7 +18,7 @@ const Dropdown = () => {
         <button className="dropdown__toggle   uppercase flex ">PAGE <Icon icon="quill:inline-down"  /></button>
         
       {isOpen && (
-        <div className="dropdown__menu flex flex-col absolute z-10 bg-white p-3 rounded text-black">
+        <div className="dropdown__menu flex flex-col absolute  z-10 bg-white p-3 rounded text-black">
           {/* <a href="/topics-listing" className=' text-black' style={{color: "black"}}>Topics Listing</a>  */}
           <Link to="topic" className=' text-black' style={{color: "black"}}> Topics Listing</Link>
           {/* <a href="/contact-form" className=' text-gray-900' style={{color: "black"}}>Contact Form</a> */}

@@ -49,7 +49,7 @@ const Header = () => {
             <a href="#faq">Faq</a>
             <a href="#contact">Contact</a>
             {/* <Link to="pages">Pages</Link> */}
-             <Link to=""><Dropdown /></Link>
+             <Link to=""><Dropdown  /></Link>
             
         </div>
 

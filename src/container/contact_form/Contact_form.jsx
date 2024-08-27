@@ -1,31 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Page__hero } from '../../component'
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 const Contact_form = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+
+
+  const handlesubmit = async(e) => {
+    e.preventDefault();
+
+    try{
+      await addDoc(collection(db, 'users'),{
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        createdAt: new Date()
+      });
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+      alert('Message added successfully!');
+    } catch(e) {
+      console.error('Error adding document:', e);
+        }
+
+  };
+
+
   return (
     <div className="contact_form ">
        <Page__hero main='Homepage' page='Contact Form' title='Contact Form'  />
        <div className="contact-form-container section__padding bg-sectioncolor grid  lg:grid-flow-col  gap-8" >
         <div className="contact-form-right">
             <h5 className=' text-3xl lg:text-4xl text-darkcolor pb-8 font-medium'>We'd love to hear from you</h5>
-            <form action="" className='flex flex-col gap-6'>
+            <form onSubmit={handlesubmit} action="" className='flex flex-col gap-6'>
                 <div className="row flex flex-col lg:flex-row gap-8">
                     <div className="col">
-                    <input type="text" name='name' placeholder='Name' className='text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor py-4 pl-6 rounded-full outline-none border   w-full  hover:border-btnbgcolor hover:transition-opacity hover:border-4 hover:transition-all  ' required />
+                    <input type="text" value={name} onChange={(e) => setName(e.target.value)}  name='name' placeholder='Name' className='text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor py-4 pl-6 rounded-full outline-none border   w-full  hover:border-btnbgcolor  hover:border-4 hover:transition-all  ' required />
                     </div>
                     <div className="col ">
-                    <input type="email" name='email' placeholder='Email address' required className='text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor py-4 pl-6 rounded-full outline-none w-full  border hover:border-btnbgcolor hover:transition-opacity hover:border-4 hover:transition-all ' />
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} name='email' placeholder='Email address' required className='text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor py-4 pl-6 rounded-full outline-none w-full  border hover:border-btnbgcolor  hover:border-4 hover:transition-all ' />
                     </div>
                 </div>
 
                 <div className="form-col">
-                <input type="text" name='subject' placeholder='Subject' className='text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor py-4 pl-6 rounded-full outline-none w-full border hover:border-btnbgcolor hover:transition-opacity hover:border-4 hover:transition-all' required />
+                <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} name='subject' placeholder='Subject' className='text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor py-4 pl-6 rounded-full outline-none w-full border hover:border-btnbgcolor hover:border-4 hover:transition-all' required />
                 </div>
                   <div className="form-col">
-                  <textarea rows={5}  placeholder='Tell me about the project ' className='w-full outline-none p-7 rounded-3xl text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor border hover:border-btnbgcolor hover:transition-opacity hover:border-4 hover:transition-all'/>
+                  <textarea rows={5} value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Tell me about the project ' className='w-full outline-none p-7 rounded-3xl text-pcolor text-xl placeholder:text-lg placeholder:text-darkcolor border hover:border-btnbgcolor  hover:border-4 hover:transition-all'/>
                   </div>
                     <div className="form-col flex justify-end items-end">
-                      <button className='rounded-full bg-btnbgcolor py-4 px-16 text-xl font-medium text-whitecolor hover:bg-btnbghovercolor '>Submit</button>
+                      <button type='submit'  className='rounded-full bg-btnbgcolor py-4 px-16 text-xl font-medium text-whitecolor hover:bg-btnbghovercolor '>Submit</button>
                     </div>
                
 
